@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="683a2918606a4985a55565bb3f91b86c" Name="Diagram1">
+        <EntityTypeShape EntityType="WardrobeMVCModel.Accessory" Width="1.5" PointX="3" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeMVCModel.Bottom" Width="1.5" PointX="6" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeMVCModel.Color" Width="1.5" PointX="0.75" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeMVCModel.Occasion" Width="1.5" PointX="0.75" PointY="2" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeMVCModel.Outfit" Width="1.5" PointX="8.25" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeMVCModel.Season" Width="1.5" PointX="0.75" PointY="11.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeMVCModel.Sho" Width="1.5" PointX="3" PointY="3.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="WardrobeMVCModel.Top" Width="1.5" PointX="3" PointY="11.125" IsExpanded="true" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Accessories_Colors" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Accessories_Occasions" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Accessories_Seasons" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Outfits_Accessories" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Bottoms_Colors" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Bottoms_Occasions" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Bottoms_Seasons" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Outfits_Bottoms" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Shoes_Colors" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Tops_Colors" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Shoes_Occasions" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Tops_Occasions" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Outfits_Shoes" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Outfits_Tops" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Shoes_Seasons" ManuallyRouted="false" />
+        <AssociationConnector Association="WardrobeMVCModel.FK_Tops_Seasons" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
