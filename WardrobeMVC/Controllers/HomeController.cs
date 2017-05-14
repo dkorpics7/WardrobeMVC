@@ -10,6 +10,7 @@ namespace WardrobeMVC.Controllers
     {
         public ActionResult Index()
         {
+            //System.Threading.Thread.Sleep(10000);
             return View();
         }
 

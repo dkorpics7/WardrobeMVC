@@ -1,12 +1,36 @@
-﻿body {
+﻿
+body {
     padding-top: 50px;
     padding-bottom: 20px;
+    color: #704100;
+    background-color: rgbA(227,168,87,0.5);
+    /*background-image: url('closet.jpg');
+    background-size: cover;*/
+}
+
+/* set background image on home page */
+.mainSec {
+    position: relative;
+    width: auto;
+    min-height: 100vh;
+    background-image: url('closet.jpg');
+    background-size: cover;
+    margin-left:-20px;
+    margin-right:-20px;
+}
+div.navbar.navbar-inverse.navbar-fixed-top {
+    margin-bottom:0px;
 }
 
 /* Set padding to keep content from hitting the edges */
 .body-content {
     padding-left: 15px;
     padding-right: 15px;
+    min-height: 80vh;
+}
+
+.container {
+    max-width: none;
 }
 
 /* Override the default bootstrap behavior where horizontal description lists 
@@ -22,3 +46,239 @@ select,
 textarea {
     max-width: 280px;
 }
+/* make navbar with a camel background and white text */
+.navbar {
+    background-color: #E3A857;
+    font-weight: 900;
+}
+/* commented out a.navbar-brand*/
+ul.nav.navbar-nav a {
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.navbar-inverse .navbar-brand {
+    color: #704100;
+}
+
+a.navbar-brand {
+    position: absolute;
+    left: 60px;
+    padding-right: 100px;
+}
+
+    ul.nav.navbar-nav a:hover, a.navbar-brand:hover {
+        background-color: #704100;
+    }
+
+span.glyphicon {
+    position: absolute;
+    left: 35px;
+    top: 18px;
+    margin-right: 10px;
+}
+/* format jumbotron */
+.jumbotron {
+    color: white;
+    background-color: #704100;
+    padding: 10px 5px 10px 5px;
+    max-width: 80vw;
+    position: relative;
+    top:10vh;
+    left:9vw;
+}
+
+    .jumbotron h1 {
+        font-weight: 900;
+        font-size: 60px;
+        text-align: center;
+        padding-bottom: 10px;
+    }
+
+div.jumbotron img {
+    width: 300px;
+    height: 200px;
+}
+
+.movedown {
+    padding-top: 20px;
+}
+
+span.italic {
+    font-style: italic;
+    font-weight: 900;
+}
+/* format header on pages */
+.header img {
+    width: 200px;
+    height: 120px;
+    border: 4px solid #704100;
+}
+.header h2 {
+    text-shadow: 3px 3px 3px #BD802C;
+    font-weight: 900;
+}
+span.subheader {
+    text-shadow:none;
+    font-style: italic;
+}
+div.row.header {
+    padding-top:30px;
+    padding-bottom:30px;
+}
+
+/* Buttons for filter */
+.button {
+    background-color: #E3A857;
+    border: 2px solid #704100;
+    padding: 10px 24px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+a.btn {
+    color:#704100;
+    font-weight:700;
+}
+a.btn:hover {
+    color:white;
+}
+.button a {
+    color: #704100;
+    font-weight:700;
+}
+.button:hover .btn:hover {
+    background-color: #704100;
+}
+.button:hover a {
+    color: white;
+    font-weight:700;
+}
+.header button {
+    float: left;
+    margin-top:20px;
+}
+/* format thumbnails on index pages*/
+.thumbnail {
+    background-color: #E3A857;
+    color:#704100;
+    border: 2px solid #704100;
+    font-weight:700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+div.caption.text-center {
+    padding: 0px 0px;
+}
+.caption h5 {
+    font-weight:700;
+}
+
+/* format links at bottom of pages */
+p.bottomlinks a {
+    color: #704100;
+    font-weight:700;
+}
+.page {
+    min-height:75vh;
+}
+
+/* format footer */
+footer {
+    font-weight: 900;
+    padding-left:10px;
+}
+footer hr {
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border-color: #704100;
+}
+footer p {
+        margin-bottom: 0px;
+}
+
+/*ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+li {
+    float: left;
+}
+
+li a, .dropbtn {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover, .dropdown:hover .dropbtn {
+    background-color: red;
+}
+
+li.dropdown {
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+}
+
+.dropdown-content a:hover {background-color: #f1f1f1}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0;
+  font-size: 14px;
+  list-style: none;
+  background-color: #ffffff;
+  border: 1px solid #cccccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
+  background-clip: padding-box;
+}*/
+

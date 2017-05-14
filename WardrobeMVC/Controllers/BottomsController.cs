@@ -18,6 +18,7 @@ namespace WardrobeMVC.Controllers
         public ActionResult Index()
         {
             var bottoms = db.Bottoms.Include(b => b.Color).Include(b => b.Occasion).Include(b => b.Season);
+
             return View(bottoms.ToList());
         }
 
