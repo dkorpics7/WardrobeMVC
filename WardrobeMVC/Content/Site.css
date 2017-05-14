@@ -169,8 +169,8 @@ span.subheader {
     font-style: italic;
 }
 div.row.header {
-    padding-top:30px;
-    padding-bottom:30px;
+    padding-top:20px;
+    padding-bottom:20px;
 }
 
 /* Buttons for filter */
@@ -228,7 +228,7 @@ div.caption.text-center {
 }
 
 /* format links at bottom of pages */
-p.bottomlinks a {
+p.bottomlinks a, div.bottomlinks a {
     color: #704100;
     font-weight:700;
 }
@@ -242,7 +242,7 @@ footer {
     font-weight: 900;
     padding-left:10px;
 }
-footer hr {
+footer hr, .form-horizontal hr, div.page hr {
         margin-top: 5px;
         margin-bottom: 5px;
         border-color: #704100;
