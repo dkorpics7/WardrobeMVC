@@ -11,7 +11,8 @@ namespace WardrobeMVC.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Occasion
     {
         public Occasion()
@@ -22,7 +23,9 @@ namespace WardrobeMVC.Models
             this.Tops = new HashSet<Top>();
         }
     
+        [Display(Name = "Occasion")]
         public int OccasionID { get; set; }
+        [Display(Name ="Occasion")]
         public string Occassion { get; set; }
     
         public virtual ICollection<Accessory> Accessories { get; set; }

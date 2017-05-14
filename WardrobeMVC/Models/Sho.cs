@@ -11,7 +11,8 @@ namespace WardrobeMVC.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Sho
     {
         public Sho()
@@ -20,12 +21,18 @@ namespace WardrobeMVC.Models
         }
     
         public int ShoeID { get; set; }
+        [Required]
+        [Display(Name = "Description of Shoes")]
         public string Name { get; set; }
+        [Display(Name = "Enter URL for Photo")]
         public string Photo { get; set; }
+        [Display(Name = "Color")]
         public int ColorID { get; set; }
+        [Display(Name = "Season")]
         public int SeasonID { get; set; }
+        [Display(Name = "Occasion")]
         public int OccasionID { get; set; }
-    
+
         public virtual Color Color { get; set; }
         public virtual Occasion Occasion { get; set; }
         public virtual ICollection<Outfit> Outfits { get; set; }

@@ -78,7 +78,7 @@ span.glyphicon {
     top: 18px;
     margin-right: 10px;
 }
-/* format jumbotron */
+/* format jumbotron for home page */
 .jumbotron {
     color: white;
     background-color: #704100;
@@ -89,11 +89,11 @@ span.glyphicon {
     left:9vw;
 }
 
-    .jumbotron h1 {
-        font-weight: 900;
-        font-size: 60px;
-        text-align: center;
-        padding-bottom: 10px;
+.jumbotron h1 {
+    font-weight: 900;
+    font-size: 60px;
+    text-align: center;
+    padding-bottom: 10px;
     }
 
 div.jumbotron img {
@@ -108,6 +108,51 @@ div.jumbotron img {
 span.italic {
     font-style: italic;
     font-weight: 900;
+}
+
+/* format details page for home page */
+.detailone {
+   color: white;
+    background-color: #704100;
+    padding: 10px 5px 10px 5px;
+    position: relative;
+    top:10vh;
+    left:20vw;
+    width: 625px;
+    max-width:70vw;
+    margin-bottom:0px;
+    padding: 10px 10px;
+}
+.detailone p {
+    font-size:18px;
+    margin-top:10px;
+    margin-bottom:0px;
+}
+.detailone img {
+    width: 180px;
+    height: 180px;
+}
+.detailone h1 {
+    margin-top:8px;
+    text-align: center;
+}
+.details {
+    padding-top:20px;
+}
+p.bottomlinks.white {
+    margin-top:0px;
+}
+p.bottomlinks.white a {
+    color:white;
+    font-weight:700;
+    font-size:14px;
+}
+p.bottomlinks.white a:hover {
+    background-color:#E3A857;
+}
+.mainSec hr {
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
 /* format header on pages */
 .header img {
@@ -171,6 +216,10 @@ a.btn:hover {
     margin-top: 10px;
     margin-bottom: 10px;
 }
+img.img-thumbnail.img-responsive {
+    width:121px;
+    height:121px;
+}
 div.caption.text-center {
     padding: 0px 0px;
 }
@@ -183,6 +232,7 @@ p.bottomlinks a {
     color: #704100;
     font-weight:700;
 }
+
 .page {
     min-height:75vh;
 }
@@ -201,84 +251,12 @@ footer p {
         margin-bottom: 0px;
 }
 
-/*ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
+footer a {
+    color: #704100;
+    font-weight:700;
 }
 
-li {
-    float: left;
+footer a:hover {
+    color: #704100;
+    font-weight:900;
 }
-
-li a, .dropbtn {
-    display: inline-block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    text-decoration: none;
-}
-
-li a:hover, .dropdown:hover .dropbtn {
-    background-color: red;
-}
-
-li.dropdown {
-    display: inline-block;
-}
-
-.dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #f9f9f9;
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
-.dropdown-content a {
-    color: black;
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
-}
-
-.dropdown-content a:hover {background-color: #f1f1f1}
-
-.dropdown:hover .dropdown-content {
-    display: block;
-}
-.caret {
-  display: inline-block;
-  width: 0;
-  height: 0;
-  margin-left: 2px;
-  vertical-align: middle;
-  border-top: 4px solid;
-  border-right: 4px solid transparent;
-  border-left: 4px solid transparent;
-}
-.dropdown-menu {
-  position: absolute;
-  top: 100%;
-  left: 0;
-  z-index: 1000;
-  display: none;
-  float: left;
-  min-width: 160px;
-  padding: 5px 0;
-  margin: 2px 0 0;
-  font-size: 14px;
-  list-style: none;
-  background-color: #ffffff;
-  border: 1px solid #cccccc;
-  border: 1px solid rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
-  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-          box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
-  background-clip: padding-box;
-}*/
-

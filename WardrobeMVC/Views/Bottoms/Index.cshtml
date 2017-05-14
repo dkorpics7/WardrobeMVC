@@ -27,8 +27,15 @@
                 <div class="thumbnail">
                     <div class="caption text-center">
                         <h5>@Html.DisplayFor(model => item.Name)</h5>
-                        <img src=@Url.Content(item.Photo) class="img-thumbnail img-responsive" alt="Picture of bottom">
-                        <p>@Html.ActionLink("View Details", "Details", new { id = item.BottomID }, new { role = "button", @class = "btn" })</p>
+                        @if (!string.IsNullOrEmpty(item.Photo))
+                        {
+                            <img src="@Url.Content(item.Photo)" class="img-thumbnail img-responsive" alt="Picture of bottom" />
+                        }
+                        else
+                        {
+                            <img src="~/Content/nophoto.jpg" class="img-thumbnail img-responsive" alt="No Photo Available"  />
+                        }
+                       <p>@Html.ActionLink("View Details", "Details", new { id = item.BottomID }, new { role = "button", @class = "btn" })</p>
                     </div>
                 </div>
             </div>

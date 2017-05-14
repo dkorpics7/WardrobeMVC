@@ -11,7 +11,8 @@ namespace WardrobeMVC.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Season
     {
         public Season()
@@ -22,7 +23,9 @@ namespace WardrobeMVC.Models
             this.Tops = new HashSet<Top>();
         }
     
+        [Display(Name ="Season")]
         public int SeasonID { get; set; }
+        [Display(Name ="Season")]
         public string Season1 { get; set; }
     
         public virtual ICollection<Accessory> Accessories { get; set; }

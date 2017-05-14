@@ -216,7 +216,9 @@
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\closet.jpg" />
+    <Content Include="Content\error.jpg" />
     <Content Include="Content\messycloset.jpg" />
+    <Content Include="Content\nophoto.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />

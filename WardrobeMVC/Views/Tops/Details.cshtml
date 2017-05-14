@@ -3,56 +3,33 @@
 @{
     ViewBag.Title = "Details";
 }
+<div class="mainSec">
 
-<h2>Details</h2>
-
-<div>
-    <h4>Top</h4>
-    <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Name)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Name)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Photo)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Photo)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Color.Color1)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Color.Color1)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Occasion.Occassion)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Occasion.Occassion)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.Season.Season1)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Season.Season1)
-        </dd>
-
-    </dl>
+    <div class="detailone container-fluid">
+        <h1>@Html.DisplayFor(model => model.Name)</h1>
+        <hr />
+        <div class="row">
+            <div class="col-md-4 col-sm-6 col-xs-12">
+                @if (!string.IsNullOrEmpty(Model.Photo))
+                {
+                    <img src="@Url.Content(Model.Photo)" class="img-thumbnail img-responsive" alt="Picture of top" />
+                }
+                else
+                {
+                    <img src="~/Content/nophoto.jpg" class="img-thumbnail img-responsive" alt="No Photo Available" />
+                }
+            </div>
+            <div class="col-md-8 col-sm-12> details">
+                <p>@Html.DisplayNameFor(model => model.Color.Color1): &nbsp; &nbsp;  &nbsp;  &nbsp;  &nbsp;      @Html.DisplayFor(model => model.Color.Color1)</p>
+                <p>@Html.DisplayNameFor(model => model.Season.Season1):  &nbsp; &nbsp; &nbsp;    @Html.DisplayFor(model => model.Season.Season1)</p>
+                <p>@Html.DisplayNameFor(model => model.Occasion.Occassion): &nbsp; &nbsp;  @Html.DisplayFor(model => model.Occasion.Occassion)</p>
+            </div>
+        </div>
+        <hr />
+        <p class="bottomlinks white">
+            @Html.ActionLink("Update", "Edit", new { id = Model.TopID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = Model.TopID }) |
+            @Html.ActionLink("Back to Tops", "Index")
+        </p>
+    </div>
 </div>
-<p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.TopID }) |
-    @Html.ActionLink("Back to List", "Index")
-</p>

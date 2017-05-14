@@ -11,7 +11,8 @@ namespace WardrobeMVC.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Top
     {
         public Top()
@@ -20,10 +21,16 @@ namespace WardrobeMVC.Models
         }
     
         public int TopID { get; set; }
+        [Required]
+        [Display(Name="Description of Top")]
         public string Name { get; set; }
+        [Display(Name="Enter URL for Photo")]
         public string Photo { get; set; }
+        [Display(Name="Color")]
         public int ColorID { get; set; }
+        [Display(Name = "Season")]
         public int SeasonID { get; set; }
+        [Display(Name = "Occasion")]
         public int OccasionID { get; set; }
     
         public virtual Color Color { get; set; }

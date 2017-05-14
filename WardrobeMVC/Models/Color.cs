@@ -11,9 +11,10 @@ namespace WardrobeMVC.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class Color
-    {
+    {      
         public Color()
         {
             this.Accessories = new HashSet<Accessory>();
@@ -22,7 +23,9 @@ namespace WardrobeMVC.Models
             this.Tops = new HashSet<Top>();
         }
     
+        [Display(Name ="Color")]
         public int ColorID { get; set; }
+        [Display(Name ="Color")]
         public string Color1 { get; set; }
     
         public virtual ICollection<Accessory> Accessories { get; set; }
