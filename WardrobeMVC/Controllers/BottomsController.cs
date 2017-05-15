@@ -46,6 +46,39 @@ namespace WardrobeMVC.Controllers
         }
 
 
+        // GET: Bottoms/Filter -- List only items that match user specifications
+        public ActionResult Filter()
+        {
+            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1");
+            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occassion");
+            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1");
+            return View();
+        }
+
+        // POST: Bottoms/Filter -- List only items that match user specifications
+        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Filter([Bind(Include = "BottomID,Name,Photo,ColorID,SeasonID,OccasionID")] Bottom bottom)
+        {
+            //List<Bottom> newbottom = new Bottom.Bottom();
+            //if (ModelState.IsValid)
+            //{
+            //    int ucolor = bottom.ColorID;
+            //    int useason = bottom.SeasonID;
+            //    int uoccasion = bottom.OccasionID;
+
+            //    foreach(var item in bottom)
+            //    {
+            //     if(item.)
+
+            //        //return RedirectToAction("Filter(ucolor, useason, uoccasion");
+            //        return View(newbottom);
+            //}
+            return View();
+        }
+
         // GET: Bottoms/Create
         public ActionResult Create()
         {

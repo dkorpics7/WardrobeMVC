@@ -321,6 +321,7 @@
     <Content Include="Views\Tops\List.cshtml" />
     <Content Include="Views\Accessories\List.cshtml" />
     <Content Include="Views\Shoes\List.cshtml" />
+    <Content Include="Views\Bottoms\Filter.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

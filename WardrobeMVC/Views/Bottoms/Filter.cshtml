@@ -1,0 +1,66 @@
+﻿@model WardrobeMVC.Models.Bottom
+
+@{
+    ViewBag.Title = "Filter Bottoms";
+}
+
+<div class="page">
+
+    @* header *@
+    <div class="row container-fluid header">
+        <div class="col-md-2 col-sm-6 col-xs-12">
+            <img src="~/Content/closet.jpg" alt="Closet Image" />
+        </div>
+        <div class="col-md-10 col-sm-6 col-xs-12">
+            <h2>FILTER BOTTOMS</h2>
+        </div>
+    </div>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-horizontal">
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.ColorID, "Color", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("ColorID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.ColorID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.SeasonID, "Season", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("SeasonID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.SeasonID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.OccasionID, "Occasion", htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.DropDownList("OccasionID", null, htmlAttributes: new { @class = "form-control" })
+                    @Html.ValidationMessageFor(model => model.OccasionID, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Submit" class="btn btn-default" />
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
+<div class="bottomlinks">
+    @Html.ActionLink("Back to Bottoms", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
