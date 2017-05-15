@@ -163,6 +163,7 @@ p.bottomlinks.white a:hover {
 .header h2 {
     text-shadow: 3px 3px 3px #BD802C;
     font-weight: 900;
+    padding-left:15px;
 }
 span.subheader {
     text-shadow:none;
