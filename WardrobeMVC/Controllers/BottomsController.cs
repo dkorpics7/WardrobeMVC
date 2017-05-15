@@ -37,6 +37,15 @@ namespace WardrobeMVC.Controllers
             return View(bottom);
         }
 
+        // GET: Bottoms List (List Details of All Items)
+        public ActionResult List()
+        {
+            var bottoms = db.Bottoms.Include(b => b.Color).Include(b => b.Occasion).Include(b => b.Season);
+
+            return View(bottoms.ToList());
+        }
+
+
         // GET: Bottoms/Create
         public ActionResult Create()
         {

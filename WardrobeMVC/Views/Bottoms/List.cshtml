@@ -1,58 +1,57 @@
-﻿@model WardrobeMVC.Models.Bottom
+﻿@model IEnumerable<WardrobeMVC.Models.Bottom>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Details Bottoms";
 }
 
-<h2>Index</h2>
+<div class="page">
 
-<p>
-    @Html.ActionLink("Create New", "Create")
-</p>
-<table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Name)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Photo)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Color.Color1)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Occasion.Occassion)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.Season.Season1)
-        </th>
-        <th></th>
-    </tr>
+    @* page header *@
+    <div class="row container-fluid header">
+        <div class="col-md-2 col-sm-6 col-xs-12">
+            <img src="~/Content/closet.jpg" alt="Closet Image" />
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <h2>INVENTORY:  <span class="subheader">Bottoms</span></h2>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <button class="button"><a href="~/Bottoms/Create">Add New Bottom</a></button>
+        </div>
+    </div>
 
-    @foreach (var item in Model)
-    {
-        <tr>
-            <td>
-                @Html.DisplayFor(modelItem => item.Name)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Photo)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Color.Color1)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Occasion.Occassion)
-            </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Season.Season1)
-            </td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { id = item.BottomID }) |
-                @Html.ActionLink("Details", "Details", new { id = item.BottomID }) |
-                @Html.ActionLink("Delete", "Delete", new { id = item.BottomID })
-            </td>
-        </tr>
-    }
+    @* details - 3 items per row *@
+    <div class="row">
+        @foreach (var item in Model)
+        {
+           
+                <div class="col-md-2 col-sm-6">
+                    <div class="thumbnail">
+                        @if (!string.IsNullOrEmpty(item.Photo))
+                        {
+                            <img src="@Url.Content(item.Photo)" class="img-thumbnail img-responsive" alt="Picture of bottom" />
+                        }
+                        else
+                        {
+                            <img src="~/Content/nophoto.jpg" class="img-thumbnail img-responsive" alt="No Photo Available" />
+                        }
+                    </div>
+                </div>
+                <div class="col-md-2 col-sm-6 listmany">
+                    <h5>@Html.DisplayFor(modelItem => item.Name)</h5>
+                    <p>@Html.DisplayFor(modelItem => item.Color.Color1)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Season.Season1)</p>
+                    <p>@Html.DisplayFor(modelItem => item.Occasion.Occassion)</p>
+                    <p class="down">
+                        @Html.ActionLink("Update", "Edit", new { id = item.BottomID }) |
+                        @Html.ActionLink("Delete", "Delete", new { id = item.BottomID })
+                    </p>
+                </div>
+        }
+    </div>
 
-</table>
+    <div class="bottomlinks">
+        @Html.ActionLink("Back to Top", "List") |
+        @Html.ActionLink("Back to Bottoms", "Index", "Bottoms")
+    </div>
+
+</div>

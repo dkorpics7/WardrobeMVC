@@ -4,8 +4,6 @@ body {
     padding-bottom: 20px;
     color: #704100;
     background-color: rgbA(227,168,87,0.5);
-    /*background-image: url('closet.jpg');
-    background-size: cover;*/
 }
 
 /* set background image on home page */
@@ -154,6 +152,24 @@ p.bottomlinks.white a:hover {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+
+/* format List pages */
+div.listmany h5 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+div.listmany p {
+    margin-bottom: 0px;
+}
+.down, .down a {
+    padding-top:10px;
+    padding-bottom:25px;
+    color: #704100;
+    text-shadow: 5px 5px 5px #E3A857;
+    font-weight:600;
+}
+
 /* format header on pages */
 .header img {
     width: 200px;
@@ -163,7 +179,10 @@ p.bottomlinks.white a:hover {
 .header h2 {
     text-shadow: 3px 3px 3px #BD802C;
     font-weight: 900;
-    padding-left:15px;
+    padding-left:30px;
+}
+.header h4 {
+    padding-left:30px;
 }
 span.subheader {
     text-shadow:none;
@@ -227,6 +246,63 @@ div.caption.text-center {
 .caption h5 {
     font-weight:700;
 }
+/* format thumbnails on outfit page*/
+.outfits div.row.thumbnail {
+    padding: 10px 10px;
+    margin-left: 10px;
+    margin-right:10px;
+    max-width:80vw;
+    margin-bottom:0px;
+}
+.outfits p {
+    margin-top:2px;
+    margin-bottom:0px;
+}
+.right {
+    float: right;
+}
+
+/*  Carousel Settings for moving hangers */
+
+/*div#myCarousel.carousel.slide {*/
+#myCarousel {
+    /*margin:  0px -20px 10px -20px;*/
+    max-width:100vw;
+    height: 60px;
+    background-image: url('hangersonrod.jpg');
+    background-size: cover;
+    background:repeat-x;
+}
+/*div.carousel-inner {
+    max-width: 120vw;
+    width: 100px;
+    height: 60px;
+    background-image: url('hangersonrod.jpg');
+    background-size: cover;
+    background:repeat-x;
+}*/
+/*div.carousel-inner img {
+    height: 100px;
+    display: inline;
+    margin: -5px -5px;
+    padding: 0px 0px;
+    border:0;
+}*/
+    /*a.carousel-control {
+    background-color:white;
+    color:darkslateblue;
+    }
+
+    .carousel-indicators li {
+    background-color:lightgray;
+    color: lightgray;
+    }
+
+    .carousel-indicators li.active {
+    background-color:darkslategrey;
+    color:darkslategrey;
+    }*/
+
 
 /* format links at bottom of pages */
 p.bottomlinks a, div.bottomlinks a {
@@ -243,7 +319,7 @@ footer {
     font-weight: 900;
     padding-left:10px;
 }
-footer hr, .form-horizontal hr, div.page hr {
+footer hr, .form-horizontal hr, div.page hr, div.outfitpics hr {
         margin-top: 5px;
         margin-bottom: 5px;
         border-color: #704100;

@@ -1,8 +1,57 @@
-﻿@model WardrobeMVC.Models.Sho
+﻿@model IEnumerable<WardrobeMVC.Models.Sho>
 
 @{
-    ViewBag.Title = "List";
+    ViewBag.Title = "Details Shoes";
 }
 
-<h2>List</h2>
+<div class="page">
 
+    @* page header *@
+    <div class="row container-fluid header">
+        <div class="col-md-2 col-sm-6 col-xs-12">
+            <img src="~/Content/closet.jpg" alt="Closet Image" />
+        </div>
+        <div class="col-md-4 col-sm-6 col-xs-12">
+            <h2>INVENTORY:  <span class="subheader">Shoes</span></h2>
+        </div>
+        <div class="col-md-6 col-sm-6 col-xs-12">
+            <button class="button"><a href="~/Tops/Create">Add New Shoes</a></button>
+        </div>
+    </div>
+
+    @* details - 3 items per row *@
+    <div class="row">
+        @foreach (var item in Model)
+        {
+
+            <div class="col-md-2 col-sm-6">
+                <div class="thumbnail">
+                    @if (!string.IsNullOrEmpty(item.Photo))
+                    {
+                        <img src="@Url.Content(item.Photo)" class="img-thumbnail img-responsive" alt="Picture of shoes" />
+                    }
+                    else
+                    {
+                        <img src="~/Content/nophoto.jpg" class="img-thumbnail img-responsive" alt="No Photo Available" />
+                    }
+                </div>
+            </div>
+            <div class="col-md-2 col-sm-6 listmany">
+                <h5>@Html.DisplayFor(modelItem => item.Name)</h5>
+                <p>@Html.DisplayFor(modelItem => item.Color.Color1)</p>
+                <p>@Html.DisplayFor(modelItem => item.Season.Season1)</p>
+                <p>@Html.DisplayFor(modelItem => item.Occasion.Occassion)</p>
+                <p class="down">
+                    @Html.ActionLink("Update", "Edit", new { id = item.ShoeID }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.ShoeID })
+                </p>
+            </div>
+        }
+    </div>
+
+    <div class="bottomlinks">
+        @Html.ActionLink("Back to Top", "List") |
+        @Html.ActionLink("Back to Shoes", "Index", "Shoes")
+    </div>
+
+</div>

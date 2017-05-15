@@ -217,8 +217,14 @@
     <Content Include="Content\bootstrap.min.css" />
     <Content Include="Content\closet.jpg" />
     <Content Include="Content\error.jpg" />
+    <Content Include="Content\hanger.jpg" />
+    <Content Include="Content\hanger2.jpg" />
+    <Content Include="Content\hangeracc.jpg" />
+    <Content Include="Content\hangers.jpg" />
+    <Content Include="Content\hangersonrod.jpg" />
     <Content Include="Content\messycloset.jpg" />
     <Content Include="Content\nophoto.jpg" />
+    <Content Include="Content\shoe rack.jpg" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -313,8 +319,8 @@
     <Content Include="Views\Occasions\Index.cshtml" />
     <Content Include="Views\Bottoms\List.cshtml" />
     <Content Include="Views\Tops\List.cshtml" />
-    <Content Include="Views\Shoes\List.cshtml" />
     <Content Include="Views\Accessories\List.cshtml" />
+    <Content Include="Views\Shoes\List.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

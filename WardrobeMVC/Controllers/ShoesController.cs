@@ -21,6 +21,14 @@ namespace WardrobeMVC.Controllers
             return View(shoes.ToList());
         }
 
+        // GET: Shoes Full Detailed List
+        public ActionResult List()
+        {
+            var shoes = db.Shoes.Include(s => s.Color).Include(s => s.Occasion).Include(s => s.Season);
+            return View(shoes.ToList());
+        }
+
+
         // GET: Shoes/Details/5
         public ActionResult Details(int? id)
         {

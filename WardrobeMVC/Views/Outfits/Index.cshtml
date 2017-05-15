@@ -4,7 +4,7 @@
     ViewBag.Title = "Outfits";
 }
 
-<div class="page">
+<div class="outfitspage">
 
     @* header *@
     <div class="row container-fluid header">
@@ -16,27 +16,159 @@
         </div>
         <div class="col-md-6 col-sm-6 col-xs-12">
             <button class="button"><a href="~/Outfits/Create">Add New Outfit</a></button>
-            @*<button class="button"><a href="~/Outfits/Index">Show All Outfits</a></button>*@
         </div>
     </div>
 
-    <div class="row">
-        @foreach (var item in Model)
-        {
-            <div class="col-sm-6 col-md-2">
-                <div class="thumbnail">
-                    <div class="caption text-center">
-                        @*<h5>@Html.DisplayFor(model => item.Name)</h5>
-                            <img src=@Url.Content(item.Photo) class="img-thumbnail img-responsive" alt="Picture of Accessory">
-                            <p>@Html.ActionLink("View Details", "Details", new { id = item.AccessoryID }, new { role = "button", @class = "btn" })</p>*@
+
+    <!--CAROUSEL OF HANGERS-->
+    <div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="2000">
+        <!-- Wrapper for slides -->
+        <div class="carousel-inner">
+            <div class="item active">
+                @*<p>
+                    I probably could have used a REPEAT command in CSS but I didn't have time to play with it
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                </p>*@
+            </div>
+
+            <div class="item">
+                @*<p>
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                </p>*@
+            </div>
+
+            <div class="item">
+                @*<p>
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                    <img src="~/Content/hangersonrod.jpg" />
+                </p>*@
+            </div>
+        </div>
+
+        <!-- Left and right controls -->
+        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left"></span>
+            <span class="sr-only">Previous</span>
+        </a>
+        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right"></span>
+            <span class="sr-only">Next</span>
+        </a>
+    </div>
+
+
+    @foreach (var item in Model)
+    {
+        <div class="outfits">
+            <div class="row thumbnail">
+                <div class="caption text-center">
+                    <div class="col-md-3 col-sm-6 col-xs-12 outfitpics">
+                        @if (!string.IsNullOrEmpty(item.Top.Photo))
+                        {
+                            <img src="@Url.Content(item.Top.Photo)" class="img-thumbnail img-responsive" alt="Picture of top" />
+                        }
+                        else
+                        {
+                            <img src="~/Content/nophoto.jpg" class="img-thumbnail img-responsive" alt="No Photo Available" />
+                        }
+                        <p>@Html.DisplayFor(modelItem => item.Top.Name)</p>
+                        <hr />
+                        <p>@Html.DisplayFor(modelItem => item.Top.Color.Color1)</p>
+                        <p>@Html.DisplayFor(modelItem => item.Top.Season.Season1)</p>
+                        <p>@Html.DisplayFor(modelItem => item.Top.Occasion.Occassion)</p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 outfitpics">
+
+                        @if (!string.IsNullOrEmpty(item.Bottom.Photo))
+                        {
+                            <img src="@Url.Content(item.Bottom.Photo)" class="img-thumbnail img-responsive" alt="Picture of bottom" />
+                        }
+                        else
+                        {
+                            <img src="~/Content/nophoto.jpg" class="img-thumbnail img-responsive" alt="No Photo Available" />
+                        }
+                        <p>@Html.DisplayFor(modelItem => item.Bottom.Name)</p>
+                        <hr />
+                        <p>@Html.DisplayFor(modelItem => item.Bottom.Color.Color1)</p>
+                        <p>@Html.DisplayFor(modelItem => item.Bottom.Season.Season1)</p>
+                        <p>@Html.DisplayFor(modelItem => item.Bottom.Occasion.Occassion)</p>
+                    </div>
+                    <div class="col-md-3 col-sm-6 col-xs-12 outfitpics">
+                        @if (!string.IsNullOrEmpty(item.Sho.Photo))
+                        {
+                            <img src="@Url.Content(item.Sho.Photo)" class="img-thumbnail img-responsive" alt="Picture of shoes" />
+                        }
+                        else
+                        {
+                            <img src="~/Content/nophoto.jpg" class="img-thumbnail img-responsive" alt="No Photo Available" />
+                        }
+                        <p>@Html.DisplayFor(modelItem => item.Sho.Name)</p>
+                        <hr />
+                        <p>@Html.DisplayFor(modelItem => item.Sho.Color.Color1)</p>
+                        <p>@Html.DisplayFor(modelItem => item.Sho.Season.Season1)</p>
+                        <p>@Html.DisplayFor(modelItem => item.Sho.Occasion.Occassion)</p>
+                    </div>
+
+                    <div class="col-md-3 col-sm-6 col-xs-12 outfitpics">
+
+                        @if (!string.IsNullOrEmpty(item.Accessory.Photo))
+                        {
+                            <img src="@Url.Content(item.Accessory.Photo)" class="img-thumbnail img-responsive" alt="Picture of accessory" />
+                        }
+                        else
+                        {
+                            <img src="~/Content/nophoto.jpg" class="img-thumbnail img-responsive" alt="No Photo Available" />
+                        }
+                        <p>@Html.DisplayFor(modelItem => item.Accessory.Name)</p>
+                        <hr />
+                        <p>@Html.DisplayFor(modelItem => item.Accessory.Color.Color1)</p>
+                        <p>@Html.DisplayFor(modelItem => item.Accessory.Season.Season1)</p>
+                        <p>@Html.DisplayFor(modelItem => item.Accessory.Occasion.Occassion)</p>
                     </div>
                 </div>
-            </div>
-        }
 
-    </div>
+                <div class="right">
+                    <hr />
+                    @Html.ActionLink("Update", "Edit", new { id = item.OutfitID }, new { role = "button", @class = "btn" }) |
+                    @Html.ActionLink("View Details", "Details", new { id = item.OutfitID }, new { role = "button", @class = "btn" }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item.OutfitID }, new { role = "button", @class = "btn" })
+                </div>
+            </div>
+        </div>
+    }
+
 </div>
 
+
 <p class="bottomlinks">
-    @Html.ActionLink("Back to Top", "Index") |
+    @Html.ActionLink("Back to Top", "Index")
 </p>

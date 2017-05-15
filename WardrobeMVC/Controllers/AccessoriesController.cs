@@ -21,6 +21,14 @@ namespace WardrobeMVC.Controllers
             return View(accessories.ToList());
         }
 
+        // GET: Accessories Full Detailed List
+        public ActionResult List()
+        {
+            var accessories = db.Accessories.Include(a => a.Color).Include(a => a.Occasion).Include(a => a.Season);
+            return View(accessories.ToList());
+        }
+
+
         // GET: Accessories/Details/5
         public ActionResult Details(int? id)
         {

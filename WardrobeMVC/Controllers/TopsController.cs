@@ -21,6 +21,13 @@ namespace WardrobeMVC.Controllers
             return View(tops.ToList());
         }
 
+        // GET: Tops for Detailed list of all tops
+        public ActionResult List()
+        {
+            var tops = db.Tops.Include(t => t.Color).Include(t => t.Occasion).Include(t => t.Season);
+            return View(tops.ToList());
+        }
+
         // GET: Tops/Details/5
         public ActionResult Details(int? id)
         {
