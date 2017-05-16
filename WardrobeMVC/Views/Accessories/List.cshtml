@@ -25,14 +25,14 @@
         {
 
             <div class="col-md-2 col-sm-6">
-                <div class="thumbnail">
+                <div class="thumbnaillist">
                     @if (!string.IsNullOrEmpty(item.Photo))
                     {
-                        <img src="@Url.Content(item.Photo)" class="img-thumbnail img-responsive" alt="Picture of Accessory" />
+                        <img src="@Url.Content(item.Photo)" class="img-thumbnail img-responsive img-list" alt="Picture of Accessory" />
                     }
                     else
                     {
-                        <img src="~/Content/nophoto.jpg" class="img-thumbnail img-responsive" alt="No Photo Available" />
+                        <img src="~/Content/nophoto.jpg" class="img-thumbnail img-responsive img-list" alt="No Photo Available" />
                     }
                 </div>
             </div>

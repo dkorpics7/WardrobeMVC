@@ -78,6 +78,7 @@ span.glyphicon {
     top: 18px;
     margin-right: 10px;
 }
+
 /* format jumbotron for home page */
 .jumbotron {
     color: white;
@@ -156,13 +157,24 @@ p.bottomlinks.white a:hover {
 }
 
 /* format List pages */
-div.listmany h5 {
-    margin-top: 20px;
-    margin-bottom: 10px;
+.thumbnaillist {
+    background-color: #E3A857;
+    color: #704100;
+    border: 2px solid #704100;
     font-weight: 700;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+div.listmany h5 {
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: 700;
+    min-height:30px;
 }
 div.listmany p {
     margin-bottom: 0px;
+    line-height:1.2;
 }
 .down, .down a {
     padding-top:10px;
@@ -181,10 +193,10 @@ div.listmany p {
 .header h2 {
     text-shadow: 3px 3px 3px #BD802C;
     font-weight: 900;
-    padding-left:30px;
+    padding-left:50px;
 }
 .header h4 {
-    padding-left:30px;
+    padding-left:50px;
 }
 span.subheader {
     text-shadow:none;
@@ -237,29 +249,35 @@ a.btn:hover {
     font-weight:700;
     margin-top: 10px;
     margin-bottom: 10px;
+    min-height:230px;
+
 }
 img.img-thumbnail.img-responsive {
     width:121px;
     height:121px;
 }
+
 div.caption.text-center {
     padding: 0px 0px;
 }
 .caption h5 {
     font-weight:700;
+    min-height:30px;
 }
 /* format thumbnails on outfit page*/
 .outfits div.row.thumbnail {
     padding: 10px 10px;
     margin-left: 10px;
     margin-right:10px;
-    max-width:78vw;
     margin-bottom:0px;
+    border-radius:12px;
+    border: 10px groove #704100;
+    background-color: rgbA(227,168,87,0.5)
 }
 .outfits p {
     margin-top:2px;
     margin-bottom:0px;
-    font-weight:500;
+    font-weight:500;A
 }
 .outfits h3 {
     font-weight:bold;
