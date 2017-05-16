@@ -22,6 +22,28 @@ namespace WardrobeMVC.Controllers
             return View(bottoms.ToList());
         }
 
+        //I was trying to add a filter option here, but it didn't work.  
+        // GET: Bottoms
+        //public ActionResult Index(int? ucolor, int? useason, int? uoccasion)
+        //{
+        //    var bottoms = db.Bottoms.Include(b => b.Color).Include(b => b.Occasion).Include(b => b.Season);
+
+
+
+        //    //List<Bottom> bottomList = db.Bottoms.ToList();     // All current bottoms
+        //    //List<Bottom> newlist = new List<Bottom>();         // list to store only bottoms requested
+
+        //    //foreach (Bottom b in bottomList)
+        //    //{
+        //    //    if (b.ColorID == ucolor && b.SeasonID == useason && b.OccasionID == uoccasion)
+        //    //    {
+        //    //        newlist.Add(b);
+        //    //    }
+        //    //}
+        //    //return RedirectToAction("Index(newlist)");
+        //    return View();
+        //}
+
         // GET: Bottoms/Details/5
         public ActionResult Details(int? id)
         {
@@ -45,39 +67,38 @@ namespace WardrobeMVC.Controllers
             return View(bottoms.ToList());
         }
 
+// I tried to add an option to filter the list by color, season, and occasion, but I couldn't do it.
+        //// GET: Bottoms/Filter -- List only items that match user specifications
+        //public ActionResult Filter()
+        //{
+        //    ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1");
+        //    ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occassion");
+        //    ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1");
+        //    return View();
+        //}
 
-        // GET: Bottoms/Filter -- List only items that match user specifications
-        public ActionResult Filter()
-        {
-            ViewBag.ColorID = new SelectList(db.Colors, "ColorID", "Color1");
-            ViewBag.OccasionID = new SelectList(db.Occasions, "OccasionID", "Occassion");
-            ViewBag.SeasonID = new SelectList(db.Seasons, "SeasonID", "Season1");
-            return View();
-        }
+        //// POST: Bottoms/Filter -- List only items that match user specifications
+        //// To protect from overposting attacks, please enable the specific properties you want to bind to, for 
+        //// more details see http://go.microsoft.com/fwlink/?LinkId=317598.
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Filter([Bind(Include = "BottomID,Name,Photo,ColorID,SeasonID,OccasionID")] Bottom bottom)
+        //{
+        //    List<Bottom> bottomList = db.Bottoms.ToList();     // All current bottoms
+        //    List<Bottom> newlist = new List<Bottom>();         // list to store only bottoms requested
 
-        // POST: Bottoms/Filter -- List only items that match user specifications
-        // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
-        // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Filter([Bind(Include = "BottomID,Name,Photo,ColorID,SeasonID,OccasionID")] Bottom bottom)
-        {
-            //List<Bottom> newbottom = new Bottom.Bottom();
-            //if (ModelState.IsValid)
-            //{
-            //    int ucolor = bottom.ColorID;
-            //    int useason = bottom.SeasonID;
-            //    int uoccasion = bottom.OccasionID;
+        //    foreach (Bottom b in bottomList)
+        //    {
+        //       if (b.BottomID !=null && b !- null && b.ColorID == ColorID && b.SeasonID == SeasonID && b.OccasionID == OccasionID)
+        //       {
+        //        newlist.Add(b);
+        //       }
+        //    }
+        //    return RedirectToAction("Index(newlist)");
 
-            //    foreach(var item in bottom)
-            //    {
-            //     if(item.)
-
-            //        //return RedirectToAction("Filter(ucolor, useason, uoccasion");
-            //        return View(newbottom);
-            //}
-            return View();
-        }
+        //    //return RedirectToAction("Index(ColorID, SeasonID, OccasionID");
+        //    //return View();
+        //}
 
         // GET: Bottoms/Create
         public ActionResult Create()
